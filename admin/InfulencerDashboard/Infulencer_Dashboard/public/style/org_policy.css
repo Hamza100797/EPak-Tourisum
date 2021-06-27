@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Event_organizer_content{
+    font-family: 'Merriweather', serif;
+}
+.Event_organizer_header {
+    background:linear-gradient(0deg, rgba(43, 130, 165, 0.541), rgba(90, 180, 67, 0.836)), url('https://i.pinimg.com/originals/a5/cd/68/a5cd6899db5af30baa405e6bf7a8ae26.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 500px;
+  
+}
+.Event_organizer_header_txt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.Event_organizer_header_txt h1 {
+    color: white;
+    font-size: 2.4rem;
+}
+.Event_organizer_policy_content {
+margin: 20px 35px;
+}
+.Event_organizer_policy_content p{
+    margin: 25px 25px;
+    text-align: center;
+    align-items: center;
+
+}

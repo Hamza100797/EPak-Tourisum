@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.safety_header{
+    background:linear-gradient(0deg, rgba(40, 164, 212, 0.61), rgba(80, 202, 49, 0.836)), url('https://www.apricottours.pk/wp-content/uploads/2017/03/fairy-meadows-tour-prices-4.jpg');
+    background-size: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 500px;
+}
+.safety_header_txt{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.safety_header_txt h1{
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+.safety_main_header h2{
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+color: black;
+font-weight: 900;
+margin: 30px auto;
+font-size: 1.8rem;
+}
+
+.safety_header_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 50px 90px;
+}
+.saftety_content p {
+    margin: auto 80px;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 50px;
+ 
+}

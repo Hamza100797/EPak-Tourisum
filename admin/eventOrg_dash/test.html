@@ -1,0 +1,233 @@
+<section class="content">
+
+    <h1>Welcome Back! <span class="" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            <?php echo $_SESSION['user']['fname'];?>
+        </span> </h1>
+    <div id="admin-content">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-12">
+                    <?php 
+                 $conn = mysqli_connect("localhost","root","","epaktourism") or die("Connection Failed:" .mysqli_connect_error());
+                 
+                    $sqlrecord="SELECT * FROM tourreservation WHERE reservation_id ={$userid}"; 
+                  $recordResult = mysqli_query($conn,$sqlrecord) or die("Query failed");
+
+                  if(mysqli_num_rows($recordResult)>0){
+                      while($row =mysqli_fetch_assoc($recordResult)){
+
+                ?>
+
+                    <!-- Form Start -->
+                    <div id="booking" class="section">
+                        <div class="section-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="booking-form">
+                                        <div class="form-header my-2">
+                                            <h1>Edit Profile</h1>
+                                        </div>
+                                        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                                            <div class="row">
+                                                <div class="col-sm-7">
+                                                    <div class="form-group">
+                                                        <span class="form-label">User ID</span>
+                                                        <input type="hidden" name="reservation_id" class="form-control"
+                                                            value="<?php echo$row['reservation_id']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">First Name</span>
+                                                        <input type="text" name="name" class="form-control"
+                                                            value="<?php echo$row['name']?>" placeholder="" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Email</span>
+                                                        <input type="text" name="email" class="form-control"
+                                                            value="<?php echo $row['email']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="form-label">Phone Number</span>
+                                                <input type="text" name="phone" class="form-control"
+                                                    value="<?php echo$row['phone']; ?>" placeholder="" readonly>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Pickup Point</span>
+                                                        <input type="text" name="pickuppoint" class="form-control"
+                                                            value="<?php echo$row['pickuppoint']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Total Persons</span>
+                                                        <input type="text" name="noadult" class="form-control"
+                                                            value="<?php echo$row['noadult']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">#of Children</span>
+                                                        <input type="text" name="childrens" class="form-control"
+                                                            value="<?php echo$row['childrens']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Paymentmethod</span>
+                                                        <input type="text" name="paymentmethod" class="form-control"
+                                                            value="<?php echo$row['paymentmethod']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">PaymentMobile</span>
+                                                        <input type="text" name="paymentmobile" class="form-control"
+                                                            value="<?php echo$row['paymentmobile']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Destination Form</span>
+                                                        <input type="text" name="destinationform" class="form-control"
+                                                            value="<?php echo$row['destinationform']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Destination To</span>
+                                                        <input type="text" name="destinationto" class="form-control"
+                                                            value="<?php echo$row['destinationto']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Date Form</span>
+                                                        <input type="date" name="dateform" class="form-control"
+                                                            value="<?php echo$row['dateform']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Date To</span>
+                                                        <input type="date" name="dateto" class="form-control"
+                                                            value="<?php echo$row['dateto']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Total Days</span>
+                                                        <input type="text" name="eventdays" class="form-control"
+                                                            value="<?php echo$row['eventdays']; ?>" placeholder=""
+                                                            readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Event Name & ID</span>
+                                                        <input type="text" name="eventname" class="form-control"
+                                                            value="<?php echo$row['eventname']; ?> & <?php echo$row['event_id']; ?>"
+                                                            placeholder="" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Action</span>
+                                                        <!-- Example single danger button -->
+                                                        <div class="btn-group">
+                                                            <button type="button"
+                                                                class="btn btn-success dropdown-toggle"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                Action
+                                                            </button>
+                                                            <ul class="dropdown-menu" name="action">
+                                                                <li><a class="dropdown-item" href="#">Confirmed
+                                                                        Payment</a></li>
+                                                                <li><a class="dropdown-item" href="#">Partial Conformed
+                                                                        Payment</a></li>
+                                                                <li><a class="dropdown-item" href="#">Reject Payment
+                                                                    </a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Ticket Number</span>
+                                                        <input type="text" name="dateto" class="form-control"
+                                                            value="<?php echo$row['ticketnum']; ?>" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Date</span>
+                                                        <input type="date" name="dateform" class="form-control"
+                                                            value="<?php echo$row['date']; ?>" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <span class="form-label">Ticket Number</span>
+                                                        <input type="text" name="dateto" class="form-control"
+                                                            value="<?php echo$row['comments']; ?>" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="form-btn">
+                                                        <input type="submit" name="submit" class="btn btn-primary"
+                                                            value="Update" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <?php 
+                    }
+                 }
+              ?>
+                <!-- /Form -->
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

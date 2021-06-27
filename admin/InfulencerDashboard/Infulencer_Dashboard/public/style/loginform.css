@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Merriweather', serif !important;
+}
+.bg-img{
+  background: url('../assets/images/expolrepak2.jpg');
+  height: 100vh;
+  background-size: 100% 100%;
+  background-position: center;
+  color: white !important;
+  font-weight: 900;
+}
+.bg-img:after{
+  position: relative;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.contentBox{
+  position: relative;
+  margin:   30px auto;
+}

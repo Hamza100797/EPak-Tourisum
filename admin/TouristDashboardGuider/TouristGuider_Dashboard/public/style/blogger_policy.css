@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Blogger_policy_content{
+    font-family: 'Merriweather', serif;
+}
+.Blogger_header {
+    background:linear-gradient(0deg, rgba(40, 134, 172, 0.3), rgba(66, 121, 52, 0.836)), url('https://upload.wikimedia.org/wikipedia/commons/5/50/Fairy_Meadows%2C_the_land_of_Fairies.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 500px;
+  
+}
+.Blogger_header_txt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.Blogger_header_txt h1 {
+    color: white;
+    font-size: 3rem;
+}
+.Blogger_policy_content {
+margin: 20px 95px;
+}
+.Blogger_policy_content p{
+    margin: 25px 25px;
+    text-align: center;
+    align-items: center;
+
+}

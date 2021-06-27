@@ -1,0 +1,16 @@
+.find_event_outersec{
+	position: relative;
+	height: 100vh;
+  background:linear-gradient(0deg, rgba(83, 137, 218, 0.3), rgba(43, 190, 56, 0.3)), url('https://connecting.pk/wp-content/uploads/2019/12/hunza-valley.jpg');
+background-size: 100% 100%;
+}
+
+.center  {
+    width: 100% !important;
+    height: 100% !important;
+display: flex !important;
+justify-content: center !important;
+align-items: center !important;
+flex-direction: row !important;
+}
+
